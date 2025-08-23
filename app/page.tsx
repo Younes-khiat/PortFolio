@@ -15,6 +15,12 @@ import FalseSeismicAlertsDetection3 from "@/static/FalseSeismicAlertsDetection3.
 import DentalClinicManagement1 from "@/static/DentalClinic1.png"
 import DentalClinicManagement2 from "@/static/DentalClinic2.jpg"
 import DentalClinicManagement3 from "@/static/DentalClinic3.jpg"
+import XmppCracker1 from "@/static/XmppCracker1.jpg"
+import XmppCracker2 from "@/static/XmppCracker2.jpg"
+import XmppCracker3 from "@/static/XmppCracker3.jpg"
+import BoumerdesExplorer1 from "@/static/BoumerdesExplorer1.webp"
+import BoumerdesExplorer2 from "@/static/BoumerdesExplorer2.webp"
+import BoumerdesExplorer3 from "@/static/BoumerdesExplorer3.webp"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
@@ -23,6 +29,8 @@ export default function Portfolio() {
   const recruitmentImages = [RecrutementForm1, RecrutementForm2, RecrutementForm3]
   const falseSeismicAlertDetectionImages = [FalseSeismicAlertsDetection1, FalseSeismicAlertsDetection2, FalseSeismicAlertsDetection3]
   const dentalClinicManagementImages = [DentalClinicManagement1, DentalClinicManagement2, DentalClinicManagement3]
+  const xmppCrackerImages = [XmppCracker1, XmppCracker2, XmppCracker3]
+  const boumerdesExplorerImages = [BoumerdesExplorer1, BoumerdesExplorer2, BoumerdesExplorer3]
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % recruitmentImages.length)
@@ -108,7 +116,7 @@ export default function Portfolio() {
               <div>
                 <a href="https://www.root-me.org/Houddini?lang=en" className="flex items-center rounded-2xl px-4 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                   <div className="w-30 h-30 rounded-full flex items-center justify-center">
-                    <Image src={rootme.src} alt="Profile silhouette" className="w-80 h-80 object-contain" />
+                    <Image src={rootme.src} alt="Profile silhouette" className="w-80 h-80 object-contain" width={120} height={120} />
                   </div>
                   <h4>My Rootme Account</h4>
                 </a>
@@ -126,7 +134,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Projects Section */}
       <section id="projects" className="px-6 py-16 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-blue-900 dark:text-orange-500 mb-12 text-center">My Projects</h2>
@@ -139,6 +147,8 @@ export default function Portfolio() {
                   src={recruitmentImages[currentImageIndex].src} 
                   alt="recrutement-form-cscc"
                   className="w-full h-full object-cover"
+                  width={120}
+                  height={120}
                 />
               </div>
               <div className="">
@@ -158,6 +168,8 @@ export default function Portfolio() {
                   src={falseSeismicAlertDetectionImages[currentImageIndex].src}
                   alt="False Seismic Alerts Detection"
                   className="w-full h-full object-cover"
+                  width={120}
+                  height={120}
                 />
               </div>
               <div className="">
@@ -175,6 +187,8 @@ export default function Portfolio() {
                   src={dentalClinicManagementImages[currentImageIndex].src}
                   alt="Dental Clinic Management"
                   className="w-full h-full object-cover"
+                  width={120}
+                  height={120}
                 />
               </div>
               <div className="">
@@ -190,10 +204,38 @@ export default function Portfolio() {
               <h3 className="text-left font-bold text-blue-900 dark:text-orange-500">Xmpp Cracker</h3>
               <div className="w-82 h-48 bg-blue-900 dark:bg-orange-600 rounded-xl flex items-center justify-center overflow-hidden">
                 <Image
-                  src="https://raw.githubusercontent.com/Younes-khiat/Xmpp-Cracker/main/screenshot.png"
+                  src={xmppCrackerImages[currentImageIndex].src}
                   alt="Xmpp Cracker"
                   className="w-full h-full object-cover"
+                  width={120}
+                  height={120}
                 />
+              </div>
+              <div className="">
+                <p className="text-gray-600 dark:text-gray-300 text-left mb-2">A tool for cracking xmpp authentication using a wordlist from a pcap file.</p>
+                <div className="flex justify-center gap-4">
+                  <Button className="bg-blue-900 hover:bg-blue-700 dark:bg-orange-600 dark:hover:bg-orange-700 text-white px-3 py-3">View Project</Button>
+                  <a href="https://github.com/Younes-khiat/XMPP-Cracker"><Button className="bg-blue-900 hover:bg-blue-700 dark:bg-orange-600 dark:hover:bg-orange-700 text-white px-3 py-3">View Code</Button></a>
+                </div>
+              </div>
+            </Card>
+            <Card className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-6 text-center hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors">
+              <h3 className="text-left font-bold text-blue-900 dark:text-orange-500">Boumerdes Explorer</h3>
+              <div className="w-82 h-48 bg-blue-900 dark:bg-orange-600 rounded-xl flex items-center justify-center overflow-hidden">
+                <Image
+                  src={boumerdesExplorerImages[currentImageIndex].src}
+                  alt="Boumerdes Explorer"
+                  className="w-full h-full object-cover"
+                  width={120}
+                  height={120}
+                />
+              </div>
+              <div className="">
+                <p className="text-gray-600 dark:text-gray-300 text-left mb-2">A web application that manages tourism in Boumerdes, shows touristic attractions and provides information to visitors, also help investors find opportunities (from BSC hackathon).</p>
+                <div className="flex justify-center gap-4">
+                  <Button className="bg-blue-900 hover:bg-blue-700 dark:bg-orange-600 dark:hover:bg-orange-700 text-white px-3 py-3">View Project</Button>
+                  <a href="https://github.com/Younes-khiat/smart-cit--back-strapi"><Button className="bg-blue-900 hover:bg-blue-700 dark:bg-orange-600 dark:hover:bg-orange-700 text-white px-3 py-3">View Code</Button></a>
+                </div>
               </div>
             </Card>
           </div>
