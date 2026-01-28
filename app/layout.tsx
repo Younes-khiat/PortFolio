@@ -18,10 +18,13 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Ayesha - UI/UX Designer Portfolio",
+  title: "Younes Khiat - Full Stack Developer & Security Enthusiast",
   description:
-    "Professional UI/UX Designer from Pakistan specializing in web development, graphic design, and digital marketing.",
-  generator: "v0.app",
+    "Full Stack Web Developer (MERN) and Web Application & Network Security enthusiast from Algeria. Portfolio showcasing projects in web development and cybersecurity.",
+  metadataBase: new URL("https://younes-khiat.github.io/PortFolio"),
+  alternates: {
+    canonical: "https://younes-khiat.github.io/PortFolio",
+  },
 }
 
 export default function RootLayout({
